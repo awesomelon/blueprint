@@ -1,0 +1,15 @@
+{
+  "name": "blueprint",
+  "owner": {
+    "name": "awesomelon"
+  },
+  "metadata": {
+    "description": "Blueprint: practical system design and engineering judgment."
+  },
+  "plugins": [
+    {
+      "name": "blueprint",
+      "source": "./"
+    }
+  ]
+}

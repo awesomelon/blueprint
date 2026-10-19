@@ -1,0 +1,20 @@
+{
+  "name": "blueprint",
+  "version": "0.1.0",
+  "description": "Practical system design and engineering judgment: requirements, invariants, failure behavior, and the simplest sufficient implementation.",
+  "author": {
+    "name": "awesomelon"
+  },
+  "homepage": "https://github.com/awesomelon/blueprint",
+  "repository": "https://github.com/awesomelon/blueprint",
+  "license": "MIT",
+  "keywords": [
+    "system-design",
+    "architecture",
+    "engineering",
+    "skills",
+    "codex",
+    "claude-code"
+  ],
+  "skills": "./skills/"
+}

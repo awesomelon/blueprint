@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blueprint"
+  short_description: "Practical system design grounded in requirements and evidence"
+  default_prompt: "Use $blueprint to inspect this task and implement the simplest design that preserves its requirements."
