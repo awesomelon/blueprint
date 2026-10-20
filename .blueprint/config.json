@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "documents": [
+    "AGENTS.md",
+    "README.md",
+    "docs/blueprint/index.md",
+    "docs/blueprint/architecture.md",
+    "docs/blueprint/quality.md",
+    "docs/blueprint/plans/harness-v0.2.md",
+    "skills/blueprint/SKILL.md",
+    "skills/blueprint/references/harness.md"
+  ],
+  "checks": [
+    {
+      "name": "package",
+      "argv": ["python3", "scripts/validate_package.py"],
+      "cwd": ".",
+      "timeout_seconds": 30
+    },
+    {
+      "name": "harness",
+      "argv": ["python3", "-m", "unittest", "discover", "-s", "tests", "-v"],
+      "cwd": ".",
+      "timeout_seconds": 60
+    }
+  ]
+}

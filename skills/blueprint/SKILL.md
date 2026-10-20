@@ -4,10 +4,10 @@ description: >-
   Apply senior-engineer judgment to software design and implementation: establish
   requirements, trace data and API flows, preserve invariants, choose a minimal
   architecture, and verify failure cases and trade-offs. Use when the user invokes
-  Blueprint, asks for system or API design, architecture review, technical
-  trade-offs, or a feature or bug fix affecting shared state, concurrency,
-  persistence, performance, or service boundaries. Scale down for small edits;
-  do not activate for unrelated writing, visual design, or general conversation.
+  Blueprint, asks for a repository harness, system or API design, architecture
+  review, technical trade-offs, or a feature or bug fix affecting shared state,
+  concurrency, persistence, performance, or service boundaries. Scale down for
+  small edits; do not activate for unrelated writing, visual design, or general conversation.
 ---
 
 # Blueprint
@@ -28,6 +28,27 @@ scale. Make necessary decisions and complete the requested work.
 - Ask a focused question only when missing information changes the decision and
   cannot be recovered from evidence. Otherwise state a consequential assumption
   and proceed. Avoid a requirements questionnaire.
+
+## Use the repository harness
+
+Keep engineering judgment in this skill and project-specific truth in the repository.
+Read [harness.md](references/harness.md) when setting up a harness, using an existing
+`.blueprint/config.json`, or repairing a missing feedback loop.
+
+- Start with the project's short instruction map, authoritative docs, and existing
+  executable checks. Read only the context needed for the affected flow.
+- When setup is requested, use [the bundled tool](scripts/harness.py) to scaffold
+  a repository-local harness. Inspect existing files first; merge knowledge into
+  existing conventions. Initialization preserves files and leaves checks unconfigured.
+- During implementation, run relevant checks, inspect failures and runtime evidence,
+  fix the underlying cause, and rerun affected checks. Finish with required gates.
+  A command exit code alone does not prove the user-visible requirement.
+- Persist a resumable execution plan for work spanning sessions or significant
+  migration/reliability risk. Keep small edits lightweight.
+- If the same failure recurs without new evidence, diagnose the missing capability
+  or report the blocker. Do not loop indefinitely, weaken a gate, or invent success.
+- Turn observed recurring failures into focused checks or maintained guidance.
+  Update affected docs with the change; avoid speculative cleanup and background jobs.
 
 ## Choose the depth
 
@@ -126,5 +147,5 @@ checklists, or a fixed disclaimer into every answer.
 - When combined with Ponytail, contribute invariants, contracts, failure behavior,
   and decision criteria without repeating its implementation workflow.
 - Read [sources.md](references/sources.md) when explaining this skill's relationship
-  to the course or Ponytail. Do not call this a verified transcription or a
-  performance-benchmarked plugin.
+  to the course, Ponytail, or harness engineering. Do not call this a verified
+  transcription or a performance-benchmarked plugin.

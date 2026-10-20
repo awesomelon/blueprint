@@ -1,7 +1,7 @@
 {
   "name": "blueprint",
-  "version": "0.1.0",
-  "description": "Practical system design and engineering judgment: requirements, invariants, failure behavior, and the simplest sufficient implementation.",
+  "version": "0.2.0",
+  "description": "Engineering judgment with an opt-in repository harness: context, invariants, executable checks, and failure evidence.",
   "author": {
     "name": "awesomelon"
   },
@@ -14,20 +14,22 @@
     "engineering",
     "skills",
     "codex",
-    "claude-code"
+    "claude-code",
+    "harness"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Blueprint",
     "shortDescription": "Design for what must hold.",
-    "longDescription": "Practical engineering judgment for requirements, data and API contracts, invariants, failure behavior, and technical trade-offs. Adapt the depth to the risk and complete implementation with relevant verification. Design and review requests remain read-only.",
+    "longDescription": "Practical engineering judgment with repository-local context, explicit checks, and a bounded repair loop. Initialize an optional harness, inspect evidence, and preserve invariants. Design and review requests remain read-only.",
     "developerName": "awesomelon",
     "category": "Developer Tools",
     "capabilities": [],
     "websiteURL": "https://github.com/awesomelon/blueprint",
     "defaultPrompt": [
       "Use $blueprint to design and implement this change.",
-      "Use $blueprint to review this architecture without editing files."
+      "Use $blueprint to review this architecture without editing files.",
+      "Use $blueprint to set up a repository harness with real project checks."
     ]
   }
 }

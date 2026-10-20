@@ -1,7 +1,7 @@
 {
   "name": "blueprint",
-  "version": "0.1.0",
-  "description": "Practical system design and engineering judgment: requirements, invariants, failure behavior, and the simplest sufficient implementation.",
+  "version": "0.2.0",
+  "description": "Engineering judgment with an opt-in repository harness: context, invariants, executable checks, and failure evidence.",
   "author": {
     "name": "awesomelon"
   },
@@ -14,7 +14,8 @@
     "engineering",
     "skills",
     "codex",
-    "claude-code"
+    "claude-code",
+    "harness"
   ],
   "skills": "./skills/"
 }

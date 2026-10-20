@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "documents": [
+    "AGENTS.md",
+    "docs/blueprint/index.md",
+    "docs/blueprint/architecture.md",
+    "docs/blueprint/quality.md",
+    "docs/blueprint/debt.md",
+    "docs/blueprint/plans/README.md"
+  ],
+  "checks": []
+}
