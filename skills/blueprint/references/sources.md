@@ -1,6 +1,6 @@
 # Sources and adaptation boundary
 
-Reviewed on 2026-10-19.
+Harness source reviewed on 2026-10-20. Earlier source notes retained below.
 
 ## Course
 
@@ -36,8 +36,24 @@ Do not claim reduced cost, faster work, or better reliability without evaluation
 
 ## Delivery scope
 
-The core skill contains instructions and supporting references. Its repository
-also packages it with optional Codex and Claude Code plugin manifests. Neither
-route installs hooks, background jobs, model-routing rules, or automatic session
-activation. Naming the skill in a prompt requests its use; availability and
-invocation syntax depend on the host application's skill support.
+The core skill contains instructions, supporting references, and an opt-in
+repository harness tool with templates. Its repository packages the same folder
+with Codex and Claude Code manifests. No route installs hooks, background jobs,
+model-routing rules, or automatic session activation. Naming the skill in a prompt
+requests its use; invocation syntax depends on the host's skill support.
+
+## Harness engineering
+
+- OpenAI, Ryan Lopopolo, [Harness engineering: leveraging Codex in an agent-first
+  world](https://openai.com/ko-KR/index/harness-engineering/), published 2026-02-11.
+
+The article motivates repository-local knowledge, concise entry-point instructions,
+mechanically enforced constraints, accessible runtime evidence, and feedback that
+improves the environment after failures. Blueprint applies these ideas through a
+small check runner, documentation templates, and an explicit repair loop.
+
+The CLI, schema, defaults, and templates are independent design choices. This
+package does not reproduce OpenAI's internal infrastructure or establish the
+article's reported productivity in other repositories. Automatic merging, relaxed
+gates, and multiple agents are not inferred requirements. Structural tests do not
+measure agent behavior or prove an application works.
